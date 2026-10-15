@@ -1,0 +1,256 @@
+css
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f5f7fa;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 8%;
+    background-color: #14213d;
+    color: white;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #fca311;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #14213d, #355c7d);
+    color: white;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #fca311;
+    color: #14213d;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #ffba42;
+}
+
+/* Products Section */
+.products {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.products h2,
+.about h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Product Cards */
+.product-card {
+    min-width: 0;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+    font-size: 21px;
+}
+
+.product-card p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.product-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #14213d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product-btn:hover {
+    background-color: #355c7d;
+}
+
+/* About Section */
+.about {
+    padding: 50px 8%;
+    text-align: center;
+    background-color: #e9eef5;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #14213d;
+    color: white;
+}
+
+/* Tablet Responsive Design */
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .products {
+        padding: 45px 5%;
+    }
+
+    .hero {
+        min-height: 350px;
+    }
+}
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px 15px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 300px;
+        padding: 45px 18px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .products {
+        padding: 35px 18px;
+    }
+
+    .products h2,
+    .about h2 {
+        font-size: 25px;
+    }
+
+    .product-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .product-card {
+        padding: 16px;
+    }
+
+    .about {
+        padding: 35px 20px;
+    }
+}
